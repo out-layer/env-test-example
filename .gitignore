@@ -2,6 +2,10 @@
 *.wasm
 .DS_Store
 
+# The built module IS committed here, so the example can be run without a Rust
+# toolchain. Rebuild with ./build.sh and re-commit when src/ changes.
+!env-test-example.wasm
+
 # Cargo.lock IS committed here, overriding any global ignore.
 #
 # OutLayer compiles this example inside the enclave and attests the hash of the
